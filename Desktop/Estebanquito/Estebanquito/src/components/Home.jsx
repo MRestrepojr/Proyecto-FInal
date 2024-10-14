@@ -73,7 +73,8 @@ function Home() {
 const containerStyle = {
   display: 'flex',
   flexDirection: 'column',
-  minHeight: '100vh',
+  height: '100vh',
+  width: '100vw',
   backgroundColor: '#f5f7fa',
   fontFamily: "'Roboto', sans-serif",
   margin: 0,
@@ -158,18 +159,20 @@ const sectionTitleStyle = {
 };
 
 const servicesGridStyle = {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
   gap: '20px',
 };
 
 // Estilos para las tarjetas (servicios)
 const cardStyle = {
-  padding: '20px',
-  backgroundColor: 'white',
-  borderRadius: '10px',
-  boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
-  textAlign: 'left',
+  padding: '10px',
+  border: '1px solid #ccc',
+  borderRadius: '5px',
+  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+  backgroundColor: '#f8f8f8',
+  width: '250px', // Set a fixed width for the cards
 };
 
 const cardTitleStyle = {
