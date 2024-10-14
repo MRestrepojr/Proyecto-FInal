@@ -3,12 +3,18 @@ import './Login.css';
 
 const api = {
   post: (url, data) => new Promise((resolve, reject) => {
-    // Simular una llamada API
+    // Simular una llamada API para múltiples usuarios
     setTimeout(() => {
-      if (data.email === 'test@example.com' && data.password === 'password') {
+      // Validación para el administrador
+      if (data.email === 'admin@example.com' && data.password === 'Admin') {
+        resolve({ data: { message: 'Inicio de sesión como admin exitoso' } });
+      }
+      // Validación para otros usuarios
+      else if (data.email === 'test@example.com' && data.password === 'password') {
         resolve({ data: { message: 'Inicio de sesión exitoso' } });
       } else {
         reject({ message: 'Credenciales inválidas' });
+        window.location.href = '/register';
       }
     }, 1000);
   })
@@ -24,12 +30,19 @@ export default function Login() {
     event.preventDefault();
     setIsLoading(true);
     setError(null);
+  
 
     api.post('/login', { email, password })
       .then((response) => {
-        console.log('Inicio de sesión exitoso:', response.data);
-        // Redireccionar a la página principal
-        // window.location.href = '/';
+        console.log(response.data.message);
+
+        if (email === 'admin@example.com') {
+          // Redirigir a la interfaz administrativa
+          window.location.href = '/Usuario';
+        } else {
+          // Redirigir a la página principal para usuarios regulares
+          window.location.href = '/';
+        }
       })
       .catch((error) => {
         console.error('Error al iniciar sesión:', error);
@@ -40,6 +53,9 @@ export default function Login() {
       });
   };
 
+const handleGoHome = () => {
+  window.location.href = '/';
+};
 
   return (
     <div className="login-container">
@@ -76,6 +92,7 @@ export default function Login() {
           >
             {isLoading ? 'Iniciando sesión...' : 'Iniciar sesión'}
           </button>
+          <button type="button" onClick={handleGoHome}>Inicio</button>
         </form>
       </div>
     </div>

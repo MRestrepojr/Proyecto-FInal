@@ -10,9 +10,8 @@ function Home() {
       <nav style={navbarStyle}>
         <div style={navBrandStyle}>EsteBanquito</div>
         <ul style={navListStyle}>
-          <li style={navItemStyle}><a href="/" style={navLinkStyle}>Inicio</a></li>
-          <button onClick={() => navigate('/login')} style={buttonStyle}>Login</button>
-          <button onClick={() => navigate('/register')} style={buttonStyle}>Registrarse</button>
+          <li style={navItemStyle}><a href="/" style={navLinkStyle}>Cerrar Sesion</a></li>
+          
         </ul>
       </nav>
 
@@ -20,37 +19,35 @@ function Home() {
       <div style={mainContentStyle}>
         <header style={headerStyle}>
           <h1 style={headerTitleStyle}>Bienvenido a EsteBanquito</h1>
-          <p style={headerSubtitleStyle}>Su confianza es nuestra prioridad.</p>
+          <p style={headerSubtitleStyle}>Gestione sus finanzas con facilidad y seguridad.</p>
         </header>
 
-        
         {/* Servicios */}
         <section style={servicesSectionStyle}>
-          <h2 style={sectionTitleStyle}>Nuestros Servicios</h2>
+          <h2 style={sectionTitleStyle}>Servicios Disponibles</h2>
           <div style={servicesGridStyle}>
             <div style={cardStyle}>
-              <h3 style={cardTitleStyle}>Consulta de saldo</h3>
-              <p style={cardTextStyle}>Verifique su saldo en tiempo real desde cualquier lugar.</p>
+              <h3 style={cardTitleStyle}>Gestión de cuentas</h3>
+              <p style={cardTextStyle}>Verifique su saldo y detalles de sus cuentas en tiempo real.</p>
+              <button onClick={() => navigate('/accounts')} style={buttonStyle}>Ver Cuentas</button>
             </div>
             <div style={cardStyle}>
-              <h3 style={cardTitleStyle}>Transferencias rápidas</h3>
-              <p style={cardTextStyle}>Realice transferencias de forma rápida y segura.</p>
+              <h3 style={cardTitleStyle}>Transacciones</h3>
+              <p style={cardTextStyle}>Realice transferencias y gestione sus transacciones.</p>
+              <button onClick={() => navigate('/transactions')} style={buttonStyle}>Ver Transacciones</button>
             </div>
             <div style={cardStyle}>
-              <h3 style={cardTitleStyle}>Pago de servicios</h3>
-              <p style={cardTextStyle}>Pague sus facturas en línea sin complicaciones.</p>
+              <h3 style={cardTitleStyle}>Solicitudes de Préstamos</h3>
+              <p style={cardTextStyle}>Solicite préstamos fácilmente con plazos flexibles.</p>
+              <button onClick={() => navigate('/loans')} style={buttonStyle}>Solicitar Préstamo</button>
             </div>
             <div style={cardStyle}>
-              <h3 style={cardTitleStyle}>Préstamos y financiamiento</h3>
-              <p style={cardTextStyle}>Obtenga acceso rápido a créditos y financiamiento.</p>
-            </div>
-            <div style={cardStyle}>
-              <h3 style={cardTitleStyle}>Atención al cliente 24/7</h3>
-              <p style={cardTextStyle}>Siempre estamos aquí para ayudarlo.</p>
+              <h3 style={cardTitleStyle}>Reportes Financieros</h3>
+              <p style={cardTextStyle}>Consulte sus ingresos, egresos y deudas.</p>
+              <button onClick={() => navigate('/reports')} style={buttonStyle}>Ver Reportes</button>
             </div>
           </div>
         </section>
-
       </div>
 
       {/* Footer */}
@@ -61,7 +58,7 @@ function Home() {
   );
 }
 
-// Estilos generales para que ocupe toda la pantalla
+// Estilos generales
 const containerStyle = {
   display: 'flex',
   flexDirection: 'column',
@@ -157,14 +154,13 @@ const servicesGridStyle = {
   gap: '20px',
 };
 
-// Estilos para las tarjetas (servicios)
 const cardStyle = {
   padding: '10px',
   border: '1px solid #ccc',
   borderRadius: '5px',
   boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
   backgroundColor: '#f8f8f8',
-  width: '250px', // Set a fixed width for the cards
+  width: '250px',
 };
 
 const cardTitleStyle = {
@@ -176,27 +172,6 @@ const cardTitleStyle = {
 const cardTextStyle = {
   fontSize: '16px',
   color: '#7f8c8d',
-};
-
-// Login Section
-const loginSectionStyle = {
-  padding: '30px',
-  backgroundColor: '#ecf0f1',
-  borderRadius: '10px',
-  boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
-  marginTop: '50px',
-};
-
-const loginTitleStyle = {
-  fontSize: '22px',
-  color: '#2980b9',
-};
-
-const loginButtonContainerStyle = {
-  display: 'flex',
-  gap: '20px',
-  marginTop: '20px',
-  justifyContent: 'center',
 };
 
 // Botones
