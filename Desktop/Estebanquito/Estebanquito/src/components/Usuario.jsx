@@ -29,7 +29,7 @@ function Home() {
             <div style={cardStyle}>
               <h3 style={cardTitleStyle}>Gestión de cuentas</h3>
               <p style={cardTextStyle}>Verifique su saldo y detalles de sus cuentas en tiempo real.</p>
-              <button onClick={() => navigate('/accounts')} style={buttonStyle}>Ver Cuentas</button>
+              <button onClick={() => navigate('/Account')} style={buttonStyle}>Ver Cuentas</button>
             </div>
             <div style={cardStyle}>
               <h3 style={cardTitleStyle}>Transacciones</h3>

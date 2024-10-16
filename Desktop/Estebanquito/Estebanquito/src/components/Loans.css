@@ -1,0 +1,170 @@
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f5f7fa;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2980b9;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-brand {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin: 0 15px;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  /* Main content */
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Header */
+  .header {
+    margin-bottom: 40px;
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .header-title {
+    color: #2c3e50;
+    font-size: 42px;
+    margin: 0;
+  }
+  
+  .header-subtitle {
+    font-size: 20px;
+    color: #7f8c8d;
+    margin-top: 10px;
+  }
+  
+  /* Servicios */
+  .services-section {
+    margin-bottom: 50px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 30px;
+  }
+  
+  .services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .card {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f8f8f8;
+    width: 250px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    color: #2980b9;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    font-size: 16px;
+    color: #7f8c8d;
+  }
+  
+  /* Formulario de préstamo */
+  .loan-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .form-label {
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .form-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  /* Botones */
+  .button {
+    padding: 12px 24px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #1f618d;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: auto;
+  }
+  
