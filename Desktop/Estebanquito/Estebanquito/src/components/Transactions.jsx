@@ -1,26 +1,19 @@
 import React from 'react';
-import './Home.css'; // assuming the CSS styles are in a separate file
+import './Home.css'; 
 
 function Account() {
   return (
     <div className="container">
       <nav className="navbar">
-        <div className="nav-brand">Banking App</div>
+        <div className="nav-brand">Mi Banco</div>
         <ul className="nav-list">
-          <li className="nav-item">
-            <a className="nav-link" href="#">Home</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Transactions</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Account</a>
-          </li>
+          <li className="nav-item"><a href="/" className="nav-link">Inicio</a></li>
+          <li className="nav-item"><a href="/Usuario" className="nav-link">Perfil</a></li>
         </ul>
       </nav>
       <main className="main-content">
         <header className="header">
-          <h1 className="header-title">Gestión de cuentas</h1>
+          <h1 className="header-title">Maneja tu dinero</h1>
           <p className="header-subtitle">Este es el componente de gestión de cuentas</p>
         </header>
         <section className="services-section">

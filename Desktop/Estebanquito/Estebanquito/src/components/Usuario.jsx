@@ -1,199 +1,61 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Home.css';
 
 function Home() {
   const navigate = useNavigate();
 
   return (
-    <div style={containerStyle}>
+    <div className="container">
       {/* Navbar */}
-      <nav style={navbarStyle}>
-        <div style={navBrandStyle}>EsteBanquito</div>
-        <ul style={navListStyle}>
-          <li style={navItemStyle}><a href="/" style={navLinkStyle}>Cerrar Sesion</a></li>
-          
+      <nav className="navbar">
+        <div className="nav-brand">EsteBanquito</div>
+        <ul className="nav-list">
+          <li className="nav-item"><a href="/" className="nav-link">Cerrar Sesion</a></li>
         </ul>
       </nav>
 
       {/* Main content */}
-      <div style={mainContentStyle}>
-        <header style={headerStyle}>
-          <h1 style={headerTitleStyle}>Bienvenido a EsteBanquito</h1>
-          <p style={headerSubtitleStyle}>Gestione sus finanzas con facilidad y seguridad.</p>
+      <div className="main-content">
+        <header className="header">
+          <h1 className="header-title">Bienvenido a EsteBanquito</h1>
+          <p className="header-subtitle">Gestione sus finanzas con facilidad y seguridad.</p>
         </header>
 
         {/* Servicios */}
-        <section style={servicesSectionStyle}>
-          <h2 style={sectionTitleStyle}>Servicios Disponibles</h2>
-          <div style={servicesGridStyle}>
-            <div style={cardStyle}>
-              <h3 style={cardTitleStyle}>Gestión de cuentas</h3>
-              <p style={cardTextStyle}>Verifique su saldo y detalles de sus cuentas en tiempo real.</p>
-              <button onClick={() => navigate('/Account')} style={buttonStyle}>Ver Cuentas</button>
+        <section className="services-section">
+          <h2 className="section-title">Servicios Disponibles</h2>
+          <div className=" services-grid">
+            <div className="card">
+              <h3 className="card-title">Gestión de cuentas</h3>
+              <p className="card-text">Verifique su saldo y detalles de sus cuentas en tiempo real.</p>
+              <button onClick={() => navigate('/Account')} className="button">Ver Cuentas</button>
             </div>
-            <div style={cardStyle}>
-              <h3 style={cardTitleStyle}>Transacciones</h3>
-              <p style={cardTextStyle}>Realice transferencias y gestione sus transacciones.</p>
-              <button onClick={() => navigate('/transactions')} style={buttonStyle}>Ver Transacciones</button>
+            <div className="card">
+              <h3 className="card-title">Transacciones</h3>
+              <p className="card-text">Realice transferencias y gestione sus transacciones.</p>
+              <button onClick={() => navigate('/transactions')} className="button">Ver Transacciones</button>
             </div>
-            <div style={cardStyle}>
-              <h3 style={cardTitleStyle}>Solicitudes de Préstamos</h3>
-              <p style={cardTextStyle}>Solicite préstamos fácilmente con plazos flexibles.</p>
-              <button onClick={() => navigate('/loans')} style={buttonStyle}>Solicitar Préstamo</button>
+            <div className="card">
+              <h3 className="card-title">Solicitudes de Préstamos</h3>
+              <p className="card-text">Solicite préstamos fácilmente con plazos flexibles.</p>
+              <button onClick={() => navigate('/loans')} className="button">Solicitar Préstamo</button>
             </div>
-            <div style={cardStyle}>
-              <h3 style={cardTitleStyle}>Reportes Financieros</h3>
-              <p style={cardTextStyle}>Consulte sus ingresos, egresos y deudas.</p>
-              <button onClick={() => navigate('/reports')} style={buttonStyle}>Ver Reportes</button>
+            <div className="card">
+              <h3 className="card-title">Reportes Financieros</h3>
+              <p className="card-text">Consulte sus ingresos, egresos y deudas.</p>
+              <button onClick={() => navigate('/reports')} className="button">Ver Reportes</button>
             </div>
           </div>
         </section>
       </div>
 
       {/* Footer */}
-      <footer style={footerStyle}>
+      <footer className="footer">
         <p>© 2024 EsteBanquito. Todos los derechos reservados.</p>
       </footer>
     </div>
   );
 }
-
-// Estilos generales
-const containerStyle = {
-  display: 'flex',
-  flexDirection: 'column',
-  height: '100vh',
-  width: '100vw',
-  backgroundColor: '#f5f7fa',
-  fontFamily: "'Roboto', sans-serif",
-  margin: 0,
-  padding: 0,
-};
-
-// Navbar
-const navbarStyle = {
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  padding: '20px',
-  backgroundColor: '#2980b9',
-  color: 'white',
-  position: 'sticky',
-  top: 0,
-  zIndex: 1000,
-};
-
-const navBrandStyle = {
-  fontSize: '24px',
-  fontWeight: 'bold',
-};
-
-const navListStyle = {
-  listStyle: 'none',
-  display: 'flex',
-  margin: 0,
-  padding: 0,
-};
-
-const navItemStyle = {
-  margin: '0 15px',
-};
-
-const navLinkStyle = {
-  color: 'white',
-  textDecoration: 'none',
-  fontSize: '16px',
-};
-
-// Main content
-const mainContentStyle = {
-  flex: 1,
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  padding: '40px 20px',
-  maxWidth: '1200px',
-  margin: '0 auto',
-  textAlign: 'center',
-};
-
-// Header
-const headerStyle = {
-  marginBottom: '40px',
-  borderBottom: '2px solid #2980b9',
-  paddingBottom: '20px',
-};
-
-const headerTitleStyle = {
-  color: '#2c3e50',
-  fontSize: '42px',
-  margin: 0,
-};
-
-const headerSubtitleStyle = {
-  fontSize: '20px',
-  color: '#7f8c8d',
-  marginTop: '10px',
-};
-
-// Servicios Section
-const servicesSectionStyle = {
-  marginBottom: '50px',
-};
-
-const sectionTitleStyle = {
-  fontSize: '28px',
-  color: '#2c3e50',
-  marginBottom: '30px',
-};
-
-const servicesGridStyle = {
-  display: 'flex',
-  flexWrap: 'wrap',
-  justifyContent: 'center',
-  gap: '20px',
-};
-
-const cardStyle = {
-  padding: '10px',
-  border: '1px solid #ccc',
-  borderRadius: '5px',
-  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-  backgroundColor: '#f8f8f8',
-  width: '250px',
-};
-
-const cardTitleStyle = {
-  fontSize: '20px',
-  color: '#2980b9',
-  marginBottom: '10px',
-};
-
-const cardTextStyle = {
-  fontSize: '16px',
-  color: '#7f8c8d',
-};
-
-// Botones
-const buttonStyle = {
-  padding: '12px 24px',
-  backgroundColor: '#2980b9',
-  color: 'white',
-  border: 'none',
-  borderRadius: '5px',
-  cursor: 'pointer',
-  fontSize: '16px',
-  transition: 'background-color 0.3s ease',
-};
-
-// Footer
-const footerStyle = {
-  padding: '20px',
-  backgroundColor: '#34495e',
-  color: 'white',
-  textAlign: 'center',
-  borderRadius: '10px',
-  marginTop: 'auto',
-};
 
 export default Home;

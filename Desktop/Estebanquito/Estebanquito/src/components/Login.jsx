@@ -62,7 +62,6 @@ function Login() {
         </ul>
       </nav>
 
-      {/* Main content */}
       <div className="main-content">
         <div className="login-section">
           <h2 className="login-title">Inicio de sesión</h2>

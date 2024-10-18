@@ -34,20 +34,15 @@ function Account() {
     }, 2000); // Simular retraso de 2 segundos
   }, []);
 
-  // Mostrar un spinner mientras los datos se están cargando
-  if (loading) {
-    return <div className="main-content">Cargando datos...</div>;
-  }
-
   return (
     <div className="container">
       {/* Navbar */}
       <nav className="navbar">
         <div className="nav-brand">Mi Banco</div>
         <ul className="nav-list">
-          <li className="nav-item"><a href="#home" className="nav-link">Inicio</a></li>
-          <li className="nav-item"><a href="#account" className="nav-link">Cuentas</a></li>
-          <li className="nav-item"><a href="#profile" className="nav-link">Perfil</a></li>
+          <li className="nav-item"><a href="/" className="nav-link">Inicio</a></li>
+          <li className="nav-item"><a href="/Account" className="nav-link">Cuentas</a></li>
+          <li className="nav-item"><a href="/Usuario" className="nav-link">Perfil</a></li>
         </ul>
       </nav>
 

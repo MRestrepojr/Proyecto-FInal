@@ -1,6 +1,6 @@
 // src/components/Loans.js
 import React, { useState } from 'react';
-import './Account.css'; // Usamos el mismo CSS para mantener consistencia
+import './Loans.css'; // Usamos el mismo CSS para mantener consistencia
 
 function Loans() {
   const [loanAmount, setLoanAmount] = useState(''); // Para el monto del préstamo ingresado
@@ -21,9 +21,8 @@ function Loans() {
       <nav className="navbar">
         <div className="nav-brand">Mi Banco</div>
         <ul className="nav-list">
-          <li className="nav-item"><a href="#home" className="nav-link">Inicio</a></li>
-          <li className="nav-item"><a href="#account" className="nav-link">Cuentas</a></li>
-          <li className="nav-item"><a href="#loans" className="nav-link">Préstamos</a></li>
+          <li className="nav-item"><a href="/" className="nav-link">Inicio</a></li>
+          <li className="nav-item"><a href="/Usuario" className="nav-link">Perfil</a></li>
         </ul>
       </nav>
 

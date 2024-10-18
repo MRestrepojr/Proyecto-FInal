@@ -7,26 +7,20 @@ function Home() {
 
   return (
     <div className="container">
-      {/* Navbar */}
       <nav className="navbar">
         <div className="nav-brand">EsteBanquito</div>
         <ul className="nav-list">
-          <li className="nav-item">
-            <a href="/" className="nav-link">Inicio</a>
-          </li>
           <button onClick={() => navigate('/login')} className="button">Login</button>
           <button onClick={() => navigate('/register')} className="button">Registrarse</button>
         </ul>
       </nav>
 
-      {/* Main content */}
       <div className="main-content">
         <header className="header">
           <h1 className="header-title">Bienvenido a EsteBanquito</h1>
           <p className="header-subtitle">Su confianza es nuestra prioridad.</p>
         </header>
 
-        {/* Servicios */}
         <section className="services-section">
           <h2 className="section-title">Nuestros Servicios</h2>
           <div className="services-grid">
